@@ -11,11 +11,9 @@ function threeSum(arr, target) {
 		  }
 	  }
   }
-	let sum=0;
+	let sum = Number.MAX_VALUE;
 	for(let i=0;i<a.length;i++){
-		if(a[i]-target<=sum){
-			sum=arr[i];
-		}
+		sum=Math.min(sum,a[i]-target);
 	}
 	return sum;
 }
